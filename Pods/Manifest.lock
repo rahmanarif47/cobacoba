@@ -1,0 +1,20 @@
+PODS:
+  - SwiftLint (0.40.3)
+  - TesseractOCRiOS (5.0.1)
+
+DEPENDENCIES:
+  - SwiftLint
+  - TesseractOCRiOS
+
+SPEC REPOS:
+  trunk:
+    - SwiftLint
+    - TesseractOCRiOS
+
+SPEC CHECKSUMS:
+  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
+
+PODFILE CHECKSUM: 2165355ec871736e44137ad7acf1efa330ccad49
+
+COCOAPODS: 1.9.3

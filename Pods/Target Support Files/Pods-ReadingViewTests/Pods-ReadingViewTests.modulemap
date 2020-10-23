@@ -1,0 +1,6 @@
+framework module Pods_ReadingViewTests {
+  umbrella header "Pods-ReadingViewTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
