@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yB9-RU-h0Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -45,6 +45,9 @@
                                     <constraint firstAttribute="height" constant="50" id="hc1-Ov-qSg"/>
                                 </constraints>
                                 <state key="normal" title="Import File"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="ZTn-R1-EIb" eventType="touchUpInside" id="JtM-kV-FOb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qPe-jy-Eme"/>
@@ -62,14 +65,64 @@
                     <connections>
                         <outlet property="buttonImportFile" destination="7ZJ-BC-m8X" id="xeo-Ce-0aP"/>
                         <outlet property="buttonScan" destination="QpH-jd-MUX" id="g5X-Is-55x"/>
+                        <segue destination="gZ1-1g-dSi" kind="show" id="dJp-5I-p3R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEg-Oy-dkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-107" y="126"/>
         </scene>
+        <!--ResultVC-->
+        <scene sceneID="3ky-EI-xHP">
+            <objects>
+                <viewController id="gZ1-1g-dSi" customClass="ResultVC" customModule="ReadingView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HuJ-yY-h1l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NlI-mz-5rT">
+                                <rect key="frame" x="37" y="150" width="351" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Xy-3k-0ss">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="672"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xSz-2B-ia7" firstAttribute="trailing" secondItem="9Xy-3k-0ss" secondAttribute="trailing" id="Bp0-X7-DB5"/>
+                                    <constraint firstItem="9Xy-3k-0ss" firstAttribute="top" secondItem="xSz-2B-ia7" secondAttribute="top" id="D4m-WU-krC"/>
+                                    <constraint firstItem="xSz-2B-ia7" firstAttribute="bottom" secondItem="9Xy-3k-0ss" secondAttribute="bottom" id="Su3-k8-Kh3"/>
+                                    <constraint firstItem="9Xy-3k-0ss" firstAttribute="leading" secondItem="xSz-2B-ia7" secondAttribute="leading" id="lUU-dH-502"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="6Jf-PR-aoX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xSz-2B-ia7"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pHf-Qu-sJU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3cB-Lw-SXe">
+                        <barButtonItem key="backBarButtonItem" title="Kembali" id="WTe-yA-NGZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollContentView" destination="NlI-mz-5rT" id="4TH-8L-oDE"/>
+                        <outlet property="textContent" destination="9Xy-3k-0ss" id="Nqp-YE-RjS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPI-B6-iYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711.59420289855075" y="119.86607142857142"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
