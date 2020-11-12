@@ -7,45 +7,27 @@
 
 import UIKit
 import MobileCoreServices
-import TesseractOCR
 import GPUImage
 
-class ReadingViewVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class ReadingViewVC: UIViewController, UIImagePickerControllerDelegate, UIDocumentPickerDelegate {
     
     @IBOutlet weak var buttonImportFile: UIButton!
     @IBOutlet weak var buttonScan: UIButton!
     
     var alertSheet = UIAlertController()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = #imageLiteral(resourceName: "matematika")
+        var imageData = image.jpegData(compressionQuality: 1)
         
-    }
-    
-    @IBAction func buttonTapped(_ sender: Any) {
+        let imageBase64String = imageData?.base64EncodedString()
+        print(imageBase64String ?? "Could not encode image to Base64")
         
-        let imagePickerActionSheet =
-          UIAlertController(title: "Snap/Upload Image",
-                            message: nil,
-                            preferredStyle: .actionSheet)
-        
-       let libraryButton = UIAlertAction(
-        title: "Choose Existing",
-        style: .default) { (alert) -> Void in
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.mediaTypes = [kUTTypeImage as String]
-        self.present(imagePicker, animated: true, completion: {
+        MathpixRequest.post(urlString: "https://api.mathpix.com/v3/text", image: imageBase64String!, completion: {_,_,_ in 
             
         })
-       }
-        imagePickerActionSheet.addAction(libraryButton)
-        
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
-        imagePickerActionSheet.addAction(cancelButton)
-        
-        present(imagePickerActionSheet, animated: true)
     }
 }

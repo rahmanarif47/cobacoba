@@ -8,5 +8,12 @@
 import Foundation
 
 struct MathpixModel : Codable {
+    let src: String
+    let formats: [String]
+    let data_options: [DataOptions]
     
+    struct DataOptions: Codable {
+        let include_asciimath: Bool
+        let include_latex: Bool
+    }
 }

@@ -10,9 +10,9 @@ import Foundation
 struct MathpixData : Codable {
     let text: String
     let html: String
-    let data: [Data]
+    let data: [mathData]
     
-    struct Data : Codable {
+    struct mathData : Codable {
         let type : String
         let value : String
     }

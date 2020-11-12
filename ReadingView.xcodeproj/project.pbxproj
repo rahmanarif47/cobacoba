@@ -10,8 +10,8 @@
 		7F1B034A255A277400874538 /* MathpixManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B0349255A277400874538 /* MathpixManager.swift */; };
 		7F1B034F255A284600874538 /* MathpixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B034E255A284600874538 /* MathpixModel.swift */; };
 		7F1B035C255A2CD100874538 /* MathpixData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B035B255A2CD100874538 /* MathpixData.swift */; };
-		7F2427CB25468DE900CEC7E9 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2427CA25468DE900CEC7E9 /* ResultVC.swift */; };
 		7F2AFA272542E388001AA10E /* ReadingViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2AFA262542E388001AA10E /* ReadingViewVC.swift */; };
+		7F441B18255CCA9E00220FF8 /* MathpixRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F441B17255CCA9E00220FF8 /* MathpixRequest.swift */; };
 		7F815333253E5DE100D99685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F815332253E5DE100D99685 /* AppDelegate.swift */; };
 		7F815335253E5DE100D99685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F815334253E5DE100D99685 /* SceneDelegate.swift */; };
 		7F81533A253E5DE100D99685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F815338253E5DE100D99685 /* Main.storyboard */; };
@@ -51,8 +51,8 @@
 		7F1B0349255A277400874538 /* MathpixManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathpixManager.swift; sourceTree = "<group>"; };
 		7F1B034E255A284600874538 /* MathpixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathpixModel.swift; sourceTree = "<group>"; };
 		7F1B035B255A2CD100874538 /* MathpixData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathpixData.swift; sourceTree = "<group>"; };
-		7F2427CA25468DE900CEC7E9 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		7F2AFA262542E388001AA10E /* ReadingViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingViewVC.swift; sourceTree = "<group>"; };
+		7F441B17255CCA9E00220FF8 /* MathpixRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathpixRequest.swift; sourceTree = "<group>"; };
 		7F81532F253E5DE100D99685 /* ReadingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F815332253E5DE100D99685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F815334253E5DE100D99685 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,10 +157,10 @@
 				7F815340253E5DE200D99685 /* Info.plist */,
 				7F815365253E687700D99685 /* ReadingView.swift */,
 				7F2AFA262542E388001AA10E /* ReadingViewVC.swift */,
-				7F2427CA25468DE900CEC7E9 /* ResultVC.swift */,
 				7F1B0349255A277400874538 /* MathpixManager.swift */,
 				7F1B034E255A284600874538 /* MathpixModel.swift */,
 				7F1B035B255A2CD100874538 /* MathpixData.swift */,
+				7F441B17255CCA9E00220FF8 /* MathpixRequest.swift */,
 			);
 			path = ReadingView;
 			sourceTree = "<group>";
@@ -423,10 +423,10 @@
 			files = (
 				7F2AFA272542E388001AA10E /* ReadingViewVC.swift in Sources */,
 				7F1B035C255A2CD100874538 /* MathpixData.swift in Sources */,
-				7F2427CB25468DE900CEC7E9 /* ResultVC.swift in Sources */,
 				7F815366253E687700D99685 /* ReadingView.swift in Sources */,
 				7F815333253E5DE100D99685 /* AppDelegate.swift in Sources */,
 				7F815335253E5DE100D99685 /* SceneDelegate.swift in Sources */,
+				7F441B18255CCA9E00220FF8 /* MathpixRequest.swift in Sources */,
 				7F1B034A255A277400874538 /* MathpixManager.swift in Sources */,
 				7F1B034F255A284600874538 /* MathpixModel.swift in Sources */,
 			);
